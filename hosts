@@ -1,0 +1,7 @@
+
+[webservers]
+web400 ansible_host=172.30.236.84 ansible_user=root
+
+[dbservers]
+db400 ansible_host=172.30.236.94 ansible_user=root
+
