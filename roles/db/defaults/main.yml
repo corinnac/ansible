@@ -3,3 +3,8 @@
 -  service_enabled: no
 -  password: secret
 -  bind_address: 127.0.0.1
+
+mysql_root_pass: Pa@ssw0rd
+mysql_bind_address: 127.0.0.1
+mysql_start: False
+mysql_service_enabled: no
