@@ -1,4 +1,5 @@
 ---
+<<<<<<< HEAD
 - name: Install MySQL for production ready server
   hosts: dbservers
   user: root
@@ -21,6 +22,23 @@
         - mysql-client
         - python-mysqldb
 
+=======
+  tasks:
+    - name: Set MySQL root password before installing
+      debconf: name='mysql-server' question='mysql-server/root_password' value='{{MySQL_root_pass | quote}}' vtype='password'
+
+    - name: Confirm MySQL root password before installing
+      debconf: name='mysql-server' question='mysql-server/root_password_again' value='{{MySQL_root_pass | quote}}' vtype='password'
+
+    - name: Install MySQL
+      apt: package={{ item }} state=installed force=yes update_cache=yes cache_valid_time=3600
+      when: ansible_os_family == 'Debian'
+      with_items:
+        - mysql-server
+        - mysql-client
+        - python-mysqldb
+
+>>>>>>> parent of c52ec41... Update DB main.yml
     - name: Deletes anonymous MySQL server user for localhost
       mysql_user: user="" state="absent" login_password="{{ MySQL_root_pass }}" login_user=root
     - name: Secures the MySQL root user
