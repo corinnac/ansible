@@ -20,4 +20,4 @@
   remote_user: root
 
   roles:
-     - db
+    - db
