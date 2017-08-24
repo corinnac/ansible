@@ -1,8 +1,6 @@
 # http://docs.ansible.com/ansible/playbooks_variables.html#variable-precedence-where-should-i-put-a-variable
 aptcachetime: 3600
 
--mysql:
--  start: false
--  service_enabled: no
--  password: secret
--  bind_address: 127.0.0.1
+#MySQL Variables
+MySQL_root_pass: P@ssw0rd
+mysql.bind_address =  127.0.0.1
