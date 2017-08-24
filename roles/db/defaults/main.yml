@@ -1,10 +1,3 @@
--mysql:
--  start: false
--  service_enabled: no
--  password: secret
--  bind_address: 127.0.0.1
+#MySQL Variables
 
-mysql_root_pass: P@ssw0rd
-mysql_bind_address: 127.0.0.1
-mysql_start: False
-mysql_service_enabled: no
+MySQL_root_pass: P@ssw0rd
