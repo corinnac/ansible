@@ -5,8 +5,5 @@ mysql:
   service_enabled: no
   password: secret
   bind_address: 127.0.0.1
-<<<<<<< HEAD
 
-MySQL_root_pass: $FPL941o2
-=======
->>>>>>> parent of 9400a78... Update DB to work with playbook.yml
+MySQL_root_pass: P@ssw0rd
