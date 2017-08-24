@@ -13,7 +13,7 @@
   remote_user: root
 
   roles:
-    - webs
+    - web
 
 - name: deploy MySQL and configure the databases
   hosts: dbservers
