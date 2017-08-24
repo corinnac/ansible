@@ -5,3 +5,5 @@ mysql:
   service_enabled: no
   password: secret
   bind_address: 127.0.0.1
+
+MySQL_root_pass: P@ssw0rd
