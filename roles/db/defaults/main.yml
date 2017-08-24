@@ -6,4 +6,4 @@ mysql:
   password: secret
   bind_address: 127.0.0.1
 
-MySQL_root_pass: P@ssw0rd
+MySQL_root_pass: $FPL941o2
