@@ -1,3 +1,8 @@
 # http://docs.ansible.com/ansible/playbooks_variables.html#variable-precedence-where-should-i-put-a-variable
 aptcachetime: 3600
 
+  vars:
+    - db_name: sfpldrupal
+    - db_user: drupal_user
+    - db_password: P@ssw0rd
+
