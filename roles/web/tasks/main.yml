@@ -12,9 +12,12 @@
     - php-mysql
     - php-xml
     - php-gd
+    - libapache2-mod-auth-mysql
 
 - name: 3. start Apache
   service: name=apache2 state=started enabled=yes
 
 - name: 4. install Hello World PHP script
   copy: src=index.php dest=/var/www/html/index.php mode=0664
+
+
