@@ -9,12 +9,9 @@
 - name: 3. install Apache Portable Runtime Utility Library - MySQL Driver 
   apt: name=libaprutil1-dbd-mysql state=present
 
-- name: 4. install Apache Modules
-  apt: name={{ item }} update_cache=yes state=present
-  with_items:
-    - dbd
-    - authn_dbd
-    - dbd_mysql
+- apache2_module:
+  state: present
+  name: dbd_mysql
 
 - name: 5. install PHP module for Apache
   apt: name={{ item }} update_cache=yes state=latest
