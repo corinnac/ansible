@@ -3,7 +3,13 @@
 - name: 1. install Apache
   apt: name=apache2 state=present
 
-- name: 2. install PHP module for Apache
+- name: 2. install Apache Utlities
+  apt: name=apache2-utils state=present
+
+- name: 3. install Apache Portable Runtime Utility Library - MySQL Driver 
+  apt: name=libaprutil1-dbd-mysql state=present
+
+- name: 4. install PHP module for Apache
   apt: name={{ item }} update_cache=yes state=latest
   with_items:
     - git
@@ -14,10 +20,10 @@
     - php-gd
     - mod_authn_dbd
 
-- name: 3. start Apache
+- name: 5. start Apache
   service: name=apache2 state=started enabled=yes
 
-- name: 4. install Hello World PHP script
+- name: 6. install Hello World PHP script
   copy: src=index.php dest=/var/www/html/index.php mode=0664
 
 
