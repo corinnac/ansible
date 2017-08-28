@@ -1,9 +1,0 @@
----
-
-- name: Install PHP and associated packages
-  apt: name=php state=latest
-
-- name: Install PHP GD library
-  apt: name=php-gd state=latest
-  notify:
-    - Restart Apache

@@ -6,9 +6,7 @@
   remote_user: root
 
   roles:
-    - update
     - common
-
 
 - name: configure and deploy the webservers and application code
   hosts: webservers
@@ -16,7 +14,6 @@
 
   roles:
     - web
-    - drupal
 
 - name: deploy MySQL and configure the databases
   hosts: dbservers
