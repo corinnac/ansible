@@ -12,7 +12,7 @@
     - php-mysql
     - php-xml
     - php-gd
-    - libapache2-mod-auth-mysql
+    - mod-authn-dbd
 
 - name: 3. start Apache
   service: name=apache2 state=started enabled=yes
