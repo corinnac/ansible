@@ -18,3 +18,15 @@
 
 - name: 4. install Hello World PHP script
   copy: src=index.php dest=/var/www/html/index.php mode=0664
+
+- name: Add jenkins user to groups
+- user: name=jenkins groups=www-data
+
+- name: Add Adam user to groups
+- user: name=amarkosian groups=www-data
+
+- name: Add Ninique user to groups
+- user: name=nsippel groups=www-data
+
+- name: Add Nikki user to groups
+- user: name=nikkistevens groups=www-data
