@@ -31,5 +31,8 @@
 - name: Add Nikki user to groups
   user: name=nikkistevens groups=www-data
 
+- name: Add Han user to groups
+  user: name=hansolo groups=www-data
+
 - name: update /var/www permissions
-  file: dest=/var/www owner=root group=www-data mode=0644 state=directory recurse=yes
+  file: dest=/var/www owner=root group=www-data mode=0644 recurse=yes
